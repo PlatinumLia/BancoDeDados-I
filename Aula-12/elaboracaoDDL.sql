@@ -4,7 +4,7 @@ CREATE DATABASE zeladores;
 CREATE TABLE areas 
 ( 
  id_area SERIAL PRIMARY KEY,  
- nome_area INT NOT NULL,  
+ nome_area VARCHAR(80) NOT NULL,  
  nivel_poluicao VARCHAR(15) NOT NULL CHECK (nivel_poluicao IN ('zona poluída', 'zona segura')) 
 );
 
@@ -37,16 +37,15 @@ CREATE TABLE baderneiro
 CREATE TABLE equipe_zeladores 
 ( 
  id_equipe SERIAL PRIMARY KEY,  
- nome_equipe VARCHAR(80) NOT NULL,  
- num_membros INT NOT NULL,  
- id_zelador INT REFERENCES zelador (id_zelador)
+ nome_equipe VARCHAR(80) NOT NULL,   
+ id_zelador_lider INT REFERENCES zelador (id_zelador)
 ); 
 
 CREATE TABLE jinki_zelador 
 ( 
  id_jinki_zelador SERIAL PRIMARY KEY,  
  nome_jinki_zelador VARCHAR(80) NOT NULL,  
- tipo_jinki_zelador VARCHAR(80) NOT NULL CHECK (tipo_jinki_zelador IN ('vestimenta', 'objeto', 'acessório')),  
+ tipo_jinki_zelador VARCHAR(80) NOT NULL CHECK (tipo_jinki_zelador IN ('vestimenta', 'objeto', 'acessório', 'desconhecido')),  
  forma_base_jinki_zelador VARCHAR(80) NOT NULL,  
  id_zelador INT REFERENCES zelador (id_zelador)
 ); 
