@@ -43,7 +43,7 @@ INSERT INTO baderneiro (nome_baderneiro, idade_baderneiro, altura_baderneiro, ge
 ('Noerde Hew Amozo', 22, 1.70, 'F'),
 ('Fu Orostor', 17, 1.60, 'M');
 
-INSERT INTO equipe_zeladores (nome_equipe, id_zelador_lider) VALUES
+INSERT INTO equipe_zeladores (nome_equipe, id_zelador) VALUES
 ('Akuta', 1),
 ('Eager', 7),
 ('Child', 9),
@@ -73,7 +73,7 @@ INSERT INTO jinki_baderneiro (nome_jinki_baderneiro, tipo_jinki_baderneiro, form
 ('Comb', 'objeto', 'pente de cabelo', 6),
 ('Hii', 'objeto', 'boneco', 7);
 
-INSERT INTO missao (nome_missao, id_equipe_zeladores, id_zelador, id_areas, id_besta_mosqueada, id_baderneiro) VALUES
+INSERT INTO missao (nome_missao, id_equipe, id_zelador, id_area, id_besta, id_baderneiro) VALUES
 ('Ry-1', 1, 3, 5, 4, NULL),
 ('Rd-1', 1, 4, 8, NULL, 2),
 ('Penta-RegP', 1, 1, 8, 5, NULL),

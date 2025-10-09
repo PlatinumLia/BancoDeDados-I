@@ -38,7 +38,7 @@ CREATE TABLE equipe_zeladores
 ( 
  id_equipe SERIAL PRIMARY KEY,  
  nome_equipe VARCHAR(80) NOT NULL,   
- id_zelador_lider INT REFERENCES zelador (id_zelador)
+ id_zelador INT REFERENCES zelador (id_zelador)
 ); 
 
 CREATE TABLE jinki_zelador 
@@ -64,9 +64,9 @@ CREATE TABLE missao
 ( 
  id_missao  SERIAL PRIMARY KEY,  
  nome_missao VARCHAR(80) NOT NULL,  
- id_equipe_zeladores INT REFERENCES equipe_zeladores (id_equipe),  
+ id_equipe INT REFERENCES equipe_zeladores (id_equipe),  
  id_zelador INT REFERENCES zelador (id_zelador),  
- id_areas INT REFERENCES areas (id_area),  
- id_besta_mosqueada INT REFERENCES besta_mosqueada (id_besta),  
+ id_area INT REFERENCES areas (id_area),  
+ id_besta INT REFERENCES besta_mosqueada (id_besta),  
  id_baderneiro INT REFERENCES baderneiro (id_baderneiro)
 ); 
